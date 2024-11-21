@@ -24,14 +24,14 @@ class Ball:
     def _ball_movement(self):
         # horizontal handling
         if self.direction == "right":
-            self.speed_x = 18
+            self.speed_x = 10
         else:
-            self.speed_x = -18
+            self.speed_x = -10
         # vertical handling
         if self.rect.y >= HEIGHT - self.radius:
-            self.speed_y = -18
+            self.speed_y = -10
         elif self.rect.y <= 0 + self.radius:
-            self.speed_y = 18
+            self.speed_y = 10
         # wall bounce handling
         self.rect.x += self.speed_x
         self.rect.y += self.speed_y
